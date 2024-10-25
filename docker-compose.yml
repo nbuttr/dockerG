@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  jupyter:
+    build: .
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./model.ipynb:/home/jovyan/model.ipynb
+      - ./dataset_teeth:/home/jovyan/dataset_teeth
